@@ -1,0 +1,3 @@
+.chef/*.pem
+.chef/trusted_certs/
+.vagrant/
