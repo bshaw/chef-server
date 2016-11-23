@@ -27,6 +27,7 @@ wget -qO- https://supermarket.chef.io/cookbooks/apt/download | sudo tar xvzC /va
 wget -qO- https://supermarket.chef.io/cookbooks/apt-chef/download | sudo tar xvzC /var/chef/cookbooks
 wget -qO- https://supermarket.chef.io/cookbooks/yum/download | sudo tar xvzC /var/chef/cookbooks
 wget -qO- https://supermarket.chef.io/cookbooks/yum-chef/download | sudo tar xvzC /var/chef/cookbooks
+wget -qO- https://supermarket.chef.io/cookbooks/compat_resource/download | sudo tar xvzC /var/chef/cookbooks
 
 #install chef-server
 sudo chef-solo -o 'recipe[chef-server::default]'
@@ -40,7 +41,7 @@ sudo chef-server-ctl org-create vagrant "Vagrant" --association_user admin --fil
 #setup chef server as a client of its self
 sudo cp vagrant.pem /etc/chef/validation.pem
 knife ssl fetch
-sudo cp -R .chef/trusted_certs/ /etc/chef/
+sudo cp -R /root/.chef/trusted_certs/ /etc/chef/
 
 #copy keys to host
 cp admin.pem /vagrant/.chef/
