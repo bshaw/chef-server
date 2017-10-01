@@ -29,7 +29,7 @@ knife cookbook site download chef-ingredient 1.1.0
 sudo tar xvzf chef-ingredient-1.1.0.tar.gz -C /var/chef/cookbooks && rm -f chef-ingredient-1.1.0.tar.gz
 
 # install chef-server
-sudo chef-solo -o 'recipe[chef-server::default]'
+sudo chef-solo -j 'https://raw.githubusercontent.com/bshaw/chef-server/master/dna.json' -o 'recipe[chef-server::default]'
 
 # create an admin user
 sudo chef-server-ctl user-create --filename admin.pem admin Chef Admin dev@null.com Password1!
