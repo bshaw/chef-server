@@ -1,4 +1,7 @@
 {
+  "chef_client": {
+    "version": "13.4.24"
+  },
   "chef-server": {
     "addons": ["push-jobs-server"],
     "api_fqdn": "chef.vbox.local",
