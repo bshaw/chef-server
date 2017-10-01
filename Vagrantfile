@@ -4,7 +4,7 @@
 Vagrant.configure(2) do |config|
 
   config.vm.define 'chef' do |chef|
-    chef.vm.box = 'bento/centos-6.8'
+    chef.vm.box = 'bento/centos-7.3'
     chef.vm.network "private_network", ip: '192.168.33.10'
 
     chef.vm.provider 'virtualbox' do |vb|
