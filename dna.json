@@ -1,0 +1,8 @@
+{
+  "chef-server": {
+    "addons": ["push-jobs-server"],
+    "api_fqdn": "chef.vbox.local",
+    "topology": "standalone",
+    "version": "12.16.14"
+  }
+}
